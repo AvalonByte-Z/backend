@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "RESTAPI-sinau",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafidziapermana/balistic.git"
+  },
+  "keywords": [],
+  "author": "Hafidz Permana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hafidziapermana/balistic/issues"
+  },
+  "homepage": "https://github.com/hafidziapermana/balistic#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.6",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
