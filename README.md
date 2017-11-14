@@ -59,14 +59,14 @@
 | PUT    | `/questions/:id/answers/:answerId` | UPDATE answer in specific question
 | DELETE | `/questions/:id/answers/:answerId` | DELETE answer in specific question
 
-### Votes
+### Votes Question/Answer
 
 | Method | End Point | Description
 |--------|-----|-------------
 | POST   | `/questions/:id/vote` | UPVOTE specific question
-| DELETE | `/questions/:id/vote` | UPVOTE specific question
+| POST | `/questions/:id/vote` | UPVOTE specific question
 | POST   | `/questions/:id/answers/:answerId/vote` | UPVOTE specific answer
-| DELETE | `/questions/:id/answers/:answerId/downvote` | DOWNVOTE specific answer
+| POST | `/questions/:id/answers/:answerId/downvote` | DOWNVOTE specific answer
 
 ### Top Questions
 
