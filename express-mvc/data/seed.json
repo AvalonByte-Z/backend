@@ -1,0 +1,35 @@
+[
+	{
+	"title": "What came first, the chicken or the egg?",
+	"questionedBy": {
+		"type": "mongoose.Schema.ObjectId",
+		"ref": "User"
+	},
+	"topics": [{"text": "javascript"}, {"text": "ruby on rails"}],
+	"votes": {
+		"type": "Number", 
+		"default":0
+	},
+	"answers": [{
+				"content": "The chicken",
+				"answeredBy": {
+					"type": "mongoose.Schema.ObjectId",
+					"ref": "User"
+				},
+				"votes": {"type": "Number", "default":0},
+				"createdAt": { "type": "Date", "default": "Date.now" },
+				"updatedAt": { "type": "Date", "default": "Date.now" }
+  				},
+  				{
+				"content": "The Egg",
+				"answeredBy": {
+					"type": "mongoose.Schema.ObjectId",
+					"ref": "User"
+				},
+				"votes": {"type": "Number", "default":0},
+				"createdAt": { "type": "Date", "default": "Date.now" },
+				"updatedAt": { "type": "Date", "default": "Date.now" }
+  				}
+  				]
+	}, { "timestamps": true }
+]
