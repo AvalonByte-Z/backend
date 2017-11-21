@@ -1,35 +1,19 @@
-[
-	{
-	"title": "What came first, the chicken or the egg?",
-	"questionedBy": {
-		"type": "mongoose.Schema.ObjectId",
-		"ref": "User"
-	},
-	"topics": [{"text": "javascript"}, {"text": "ruby on rails"}],
-	"votes": {
-		"type": "Number", 
-		"default":0
-	},
-	"answers": [{
-				"content": "The chicken",
-				"answeredBy": {
-					"type": "mongoose.Schema.ObjectId",
-					"ref": "User"
-				},
-				"votes": {"type": "Number", "default":0},
-				"createdAt": { "type": "Date", "default": "Date.now" },
-				"updatedAt": { "type": "Date", "default": "Date.now" }
-  				},
-  				{
-				"content": "The Egg",
-				"answeredBy": {
-					"type": "mongoose.Schema.ObjectId",
-					"ref": "User"
-				},
-				"votes": {"type": "Number", "default":0},
-				"createdAt": { "type": "Date", "default": "Date.now" },
-				"updatedAt": { "type": "Date", "default": "Date.now" }
-  				}
-  				]
-	}, { "timestamps": true }
-]
+{
+    "_id": "5a133bbb40f181452b25a537",
+    "id": 1,
+    "updatedAt": "2017-11-20T20:31:55.837Z",
+    "createdAt": "2017-11-20T20:31:55.837Z",
+    "questionedBy": {
+        "_id": "5a130830e064b42ab65d45fe",
+        "email": "hafidzzpermana09@gmail.com",
+        "password": "admin",
+        "name": "hafidzpermana",
+        "__v": 0,
+        "role": "user"
+    },
+    "title": "What came first the chicken or the egg?",
+    "__v": 0,
+    "answers": [],
+    "votes": 0,
+    "topics": []
+}

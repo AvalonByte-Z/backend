@@ -103,7 +103,6 @@ module.exports = {
       res.send({ message: "User token is invalid" })
     }
  },
-  
                                                      
 	putAnAnswer: (req, res, next) => {
 		Question.findOneAndUpdate(

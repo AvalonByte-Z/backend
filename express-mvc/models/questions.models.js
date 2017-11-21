@@ -1,20 +1,21 @@
 const mongoose = require('mongoose');
+const AutoIncrement = require("mongoose-sequence")(mongoose);
 const Schema = mongoose.Schema;
 
 const QuestionSchema = new Schema({
 	title: String,
-	questionedBy: {
+	by: {
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
 	},
-	topics: [{text: String}],
+	topics: [{ text: String }],
 	votes: {
 		type: Number, 
 		default:0
 	},
 	answers: [{
 				content: String,
-				answeredBy: {
+				by: {
 					type: mongoose.Schema.ObjectId,
 					ref: 'User'
 				},

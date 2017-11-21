@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const AutoIncrement = require("mongoose-sequence")(mongoose)
 const Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
@@ -12,18 +13,6 @@ var UserSchema = new Schema({
     default: 'user'
   },
   password: String,
-  // questions: {
-  // 	questioned: [{
-  // 		type: Schema.Types.ObjectID
-  // 	}]
-  // }
-  // answers: {
-  // 	answered: [{
-  // 		type: Schema.Types.ObjectID
-  // 		ref: 
-  // 	}]
-  // }
-
 })
 
 UserSchema.plugin(AutoIncrement, { id: "user_id", inc_field: "id" })

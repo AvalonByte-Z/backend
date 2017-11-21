@@ -1,7 +1,7 @@
-process.env.NODE_ENV !== "production" && require("dotenv").config()
+process.env.NODE_ENV !== "development" && require("dotenv").config()
 
 // Express Depedecies
-const express = require('express')
+const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const cors = require('cors');

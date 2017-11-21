@@ -13,7 +13,7 @@ router.delete("/:qID", Questions.deleteAQuestion)
 //-------------------------- ANSWERS ---------------------------//
 
 router.post('/:qID/answers', Questions.postAnAnswer)
-// router.put('/:qID/answers/:aID', Questions.putAnAnswer)
+//router.put('/:qID/answers/:aID', Questions.putAnAnswer)
 // router.delete('/:qID/answers/:aID', Questions.deleteAnAnswer)
 
 //-------------------------- QUESTION & ANSWER VOTE ---------------------------------//
