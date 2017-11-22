@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const  Questions = require('../controller/questions.controller')
+const Questions = require('../controller/questions.controller')
+const Answers = require('../controller/answers.controller') 
+const Votes = require('../controller/votes.controller')
 
 //---------------------- QUESTIONS --------------------------//
 
@@ -12,9 +14,9 @@ router.delete("/:qID", Questions.deleteAQuestion)
 
 //-------------------------- ANSWERS ---------------------------//
 
-router.post('/:qID/answers', Questions.postAnAnswer)
-//router.put('/:qID/answers/:aID', Questions.putAnAnswer)
-// router.delete('/:qID/answers/:aID', Questions.deleteAnAnswer)
+router.post('/:qID/answers', Answers.postAnAnswer)
+router.put('/:qID/answers/:aID', Answers.putAnAnswer)
+router.delete('/:qID/answers/:aID', Answers.deleteAnAnswer)
 
 //-------------------------- QUESTION & ANSWER VOTE ---------------------------------//
 
