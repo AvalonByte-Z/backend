@@ -2,12 +2,12 @@ const mongoose = require("mongoose")
 const User = require("../models/users.models")
 
 module.exports = {
-  // destroy: (req, res, next) => {
-  //   mongoose.connection.db.dropCollection("users", (err, result) => {
-  //     if (err) res.send(err)
-  //     else res.send("Collection users dropped")
-  //   })
-  // },
+  destroy: (req, res, next) => {
+    mongoose.connection.db.dropCollection("users", (err, result) => {
+      if (err) res.send(err)
+      else res.send("Collection users dropped")
+    })
+  },
 
   getAllUsers: (req, res, next) => {
     const users = User.find({}, (err, users) => {
@@ -19,7 +19,7 @@ module.exports = {
   getAUsers: (req, res, next) => {
     const user = User.findOne(
       {
-        id: req.params.id
+        _id: req.params.uID
       },
       (err, user) => {
         if (err) res.send(err)
