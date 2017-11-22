@@ -10,7 +10,6 @@ const cookieParser = require("cookie-parser");
 const mongoose = require('mongoose');
 const jwt = require("jsonwebtoken");
 
-// Connect to mongodb process.env.DATABASE
 mongoose.connect(process.env.DATABASE, {useMongoClient:true});
 //mongoose.connect('mongodb://localhost/qna', {useMongoClient:true});
 mongoose.Promise = global.Promise;
@@ -37,8 +36,8 @@ app.get('/', function (req, res) {
   res.send('TOPPPP !');
 })
 
-app.listen(3000, function () {
-  console.log('Server listening on port 3000!');
+app.listen(8080, function () {
+  console.log('Server listening on port 8080!');
 })
 
 module.exports = app;
