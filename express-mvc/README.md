@@ -8,14 +8,14 @@
 
 ## Pages
 
-- [ ] Home
-- [ ] Sign Up
-- [ ] Sign In
+- [X] Home
+- [X] Sign Up
+- [X] Sign In
 - [ ] Sign Out
-- [ ] Profile
-- [ ] Questions
-  - [ ] Question
-- [ ] Answers
+- [X] Profile
+- [X] Questions
+  - [X] Question
+- [X] Answers
 - [ ] Search
   - [ ] Category/Topic
   - [ ] Top Questions
@@ -28,51 +28,47 @@
 | Method | End Point | Description
 |--------|-----|-------------
 | GET    | `/` | GET home page
-
+| POST   | `/auth/signup`          | Auth SignUp 
+| POST   | `/auth/login`          | Auth SignIn
 ### Users
 
 | Method | End Point | Description
 |--------|-----|-------------
-| GET    | `/users` | GET List Users
-| POST   | `/users` | CREATE user
-| POST   | `/auth/`          | Auth 
-| GET    | `/users/me`            | GET Profile Page
-| DELETE | `/users/:id`           | DELETE account
-| GET    | `/users/:userId/questions`       | GET my questions
-| GET    | `/users/:userId/votes` | GET my voted answers
+| GET    | `api/users` | GET List Users 
+| GET    | `api/users/:uID`            | GET Profile Page
 
 ### Questions
 
 | Method | End Point | Description
 |--------|-----|-------------
-| GET    | `/questions`     | GET all questions
-| GET    | `/questions/:id` | GET specific question
-| POST   | `/questions`     | POST specific question
-| PUT    | `/questions/:id` | UPDATE specific question
-| DELETE | `/questions/:id` | DELETE specific question
+| GET    | `api/questions`     | GET all questions
+| GET    | `api/questions/:qID` | GET specific question
+| POST   | `api/questions`     | POST specific question
+| PUT    | `api/questions/:qID` | UPDATE specific question
+| DELETE | `api/questions/:qID` | DELETE specific question
 
 ### Answers
 
 | Method | End Point | Description
 |--------|-----|-------------
-| POST   | `/questions/:id/answers`           | POST answer to specific question
-| PUT    | `/questions/:id/answers/:answerId` | UPDATE answer in specific question
-| DELETE | `/questions/:id/answers/:answerId` | DELETE answer in specific question
+| POST   | `api/questions/:qID/answers`           | POST answer to specific question
+| PUT    | `api/questions/:qID/answers/:aID` | UPDATE answer in specific question
+| DELETE | `api/questions/:qID/answers/:aID` | DELETE answer in specific question
 
 ### Votes Question/Answer
 
 | Method | End Point | Description
 |--------|-----|-------------
-| POST   | `/questions/:id/vote` | UPVOTE specific question
-| POST | `/questions/:id/vote` | UPVOTE specific question
-| POST   | `/questions/:id/answers/:answerId/vote` | UPVOTE specific answer
-| POST | `/questions/:id/answers/:answerId/downvote` | DOWNVOTE specific answer
+| POST   | `api/questions/:qID/vote` | UPVOTE specific question
+| POST | `api/questions/:qID/vote` | UPVOTE specific question
+| POST   | `api/questions/:qID/answers/:answerId/vote` | UPVOTE specific answer
+| POST | `api/questions/:qID/answers/:answerId/downvote` | DOWNVOTE specific answer
 
 ### Top Questions
 
 | Method | End Point | Description
 |--------|-----|-------------
-| GET   | `questions/top-questions` | GET questions orderlist based on votecount
+| GET   | `api/questions/top-questions` | GET questions orderlist based on votecount
 
 --------------------------------------------------------------------------------
 
@@ -100,7 +96,7 @@
 ```js
 {
 	title: String,
-	questionedBy: {
+	by: {
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
 	},
@@ -118,7 +114,7 @@
 ```js
 {
 	content: String,
-	answeredBy: {
+	by: {
 					type: mongoose.Schema.ObjectId,
 					ref: 'User'
 				},
