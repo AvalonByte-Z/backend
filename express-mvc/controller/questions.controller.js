@@ -84,8 +84,7 @@ module.exports = {
 			content: req.body.content,
 			by: user._id
 		};
-		Question.populate("answers.by")
-			.update(
+		Question.update(
 			{ _id: req.params.qID },
 			{ $push: { answers: newAnswer } },
 			function(err) {
